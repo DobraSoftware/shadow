@@ -89,6 +89,8 @@ build() {
   )
 
   cd $pkgname-$pkgver
+  # add extra check, preventing accidental deletion of other user's home dirs when using `userdel -r <user with home in />`
+  export CFLAGS="$CFLAGS -DEXTRA_CHECK_HOME_DIR"
   ./configure "${configure_options[@]}"
 
   # prevent excessive overlinking due to libtool
