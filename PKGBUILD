@@ -8,7 +8,7 @@ pkgrel=3
 pkgdesc="Password and account management tool suite with support for shadow files and PAM"
 arch=(x86_64)
 url="https://github.com/shadow-maint/shadow"
-license=(BSD)
+license=(BSD-3-Clause)
 depends=(
   acl libacl.so
   attr libattr.so
