@@ -75,22 +75,22 @@ prepare() {
 
 build() {
   local configure_options=(
-    --prefix=/usr
     --bindir=/usr/bin
-    --sbindir=/usr/bin
+    --disable-account-tools-setuid  # no setuid for chgpasswd, chpasswd, groupadd, groupdel, groupmod, newusers, useradd, userdel, usermod
+    --enable-man
     --libdir=/usr/lib
     --mandir=/usr/share/man
+    --prefix=/usr
+    --sbindir=/usr/bin
     --sysconfdir=/etc
-    --disable-account-tools-setuid
-    --enable-man
-    --with-fcaps
-    --with-libpam
-    --with-group-name-max-length=32
     --with-audit
     --with-bcrypt
+    --with-fcaps  # use capabilities instead of setuid for setuidmap and setgidmap
+    --with-group-name-max-length=32
+    --with-libpam  # PAM integration for chpasswd, groupmems, newusers, passwd
     --with-yescrypt
     --without-selinux
-    --without-su
+    --without-su  # su is provided by util-linux
   )
 
   cd $pkgname-$pkgver
