@@ -17,7 +17,12 @@ depends=(
   libxcrypt libcrypt.so
   pam libpam.so libpam_misc.so
 )
-makedepends=(docbook-xsl itstool libcap libxslt)
+makedepends=(
+  docbook-xsl
+  itstool
+  libcap
+  libxslt
+)
 backup=(
   etc/default/useradd
   etc/login.defs
