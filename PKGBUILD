@@ -21,7 +21,10 @@ makedepends=(docbook-xsl itstool libcap libxslt)
 backup=(
   etc/default/useradd
   etc/login.defs
-  etc/pam.d/{chage,{,ch,chg}passwd,group{add,del,mems,mod},newusers,shadow,user{add,del,mod}}
+  etc/pam.d/chpasswd
+  etc/pam.d/groupmems
+  etc/pam.d/newusers
+  etc/pam.d/passwd
 )
 options=(!emptydirs)
 # NOTE: distribution patches are taken from https://gitlab.archlinux.org/archlinux/packaging/upstream/shadow/-/commits/v4.13.0.arch1
