@@ -10,18 +10,18 @@ arch=(x86_64)
 url="https://github.com/shadow-maint/shadow"
 license=(BSD-3-Clause)
 depends=(
-  acl libacl.so
-  attr libattr.so
-  audit libaudit.so
   glibc
-  libxcrypt libcrypt.so
-  pam libpam.so libpam_misc.so
 )
 makedepends=(
+  acl
+  attr
+  audit
   docbook-xsl
   itstool
   libcap
+  libxcrypt
   libxslt
+  pam
 )
 backup=(
   etc/default/useradd
@@ -113,6 +113,14 @@ build() {
 }
 
 package() {
+  depends+=(
+    acl libacl.so
+    attr libattr.so
+    audit libaudit.so
+    libxcrypt libcrypt.so
+    pam libpam.so libpam_misc.so
+  )
+
   cd $pkgname-$pkgver
 
   make DESTDIR="$pkgdir" install
