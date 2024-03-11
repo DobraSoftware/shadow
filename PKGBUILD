@@ -96,6 +96,7 @@ build() {
     --with-group-name-max-length=32
     --with-libpam  # PAM integration for chpasswd, groupmems, newusers, passwd
     --with-yescrypt
+    --without-bcrypt
     --without-libbsd  # shadow can use internal implementation for getting passphrase
     --without-nscd  # we do not ship nscd anymore
     --without-selinux
