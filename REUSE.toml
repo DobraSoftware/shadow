@@ -17,15 +17,10 @@ path = [
     "*.timer",
     "*.desktop",
     "*.hook",
-]
-SPDX-FileCopyrightText = "Arch Linux contributors"
-SPDX-License-Identifier = "0BSD"
-
-[[annotations]]
-path = [
+    "useradd.defaults",
     "0001-Disable-replaced-tools-their-man-pages-and-PAM-integ.patch",
     "0002-Adapt-login.defs-for-PAM-and-util-linux.patch",
     "0003-Add-Arch-Linux-defaults-for-login.defs.patch",
 ]
-SPDX-FileCopyrightText = "shadow contributors"
-SPDX-License-Identifier = "BSD-3-Clause"
+SPDX-FileCopyrightText = "Arch Linux contributors"
+SPDX-License-Identifier = "0BSD"
